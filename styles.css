@@ -123,7 +123,8 @@ header {
 				bottom: 2px;
 				right:0px;
 				
-				
+				outline: none; /* Remove default focus outline */
+    -webkit-tap-highlight-color: transparent;
 			}
 		}
 	}
@@ -506,6 +507,7 @@ h2 {
 		}
 		article {
 			background-color: #1c1b1f;
+			
 			padding:20px;
 			border-radius:30px;
 			flex:1;
@@ -521,6 +523,7 @@ h2 {
 			}
 			p {
 				margin-bottom:10px;
+				
 			}
 			figure {
 				width:85%;
