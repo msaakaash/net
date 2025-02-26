@@ -167,110 +167,11 @@ header {
 		}
 	}
 }
-
-.connect{
-	align-items: center;
-	align-items: center;
-	margin: auto;
-}
-
-section {
-	max-width:1440px;
-	margin:auto;
-	gap:25px;
-	margin-top:75px;
-	margin-bottom:75px;
-
-	@media (max-width:1440px){
-		padding-left:30px;
-		padding-right:30px;
-	}
-	@media (max-width:764){
-		margin-top:0;
-	}
-}
-
-
-h1 {
-	font-size:64px;
-	line-height:1;
-	margin-bottom:10px;
-	small {
-		display:block;
-		font-weight:100;
-	}
-	@media (max-width:1024px){
-		font-size:48px;
-	}
-}
-
-.hero {
-	display:flex;
-	
-	@media (max-width:1024px){
-		flex-direction:column;
-	}
-	.hero-blue {
-
-		@media (max-width:764px){
-			h1{
-				font-size:40px;
-			}
-		}
-		flex:1;
-		
-		background-color:#1c1b1f;
-		border-radius:30px;
-		padding:30px;
-		
-		display:flex;
-	
-		flex-direction:column;
-		justify-content:center;
-		span {
-			@media (max-width:768px){
-				display:none;
-				
-				
-			}
-		}
-		
-		.social-links {
-			margin-top: 15px;
-			
-			a {
-				
-				&:hover {
-					text-decoration:none;
-				}
-			}
-			
-		}
-	}
-	.hero-yellow {
-	
-		background-color: black;
-		border-radius:30px;
-		padding:0px 30px;
-		display:flex;
-		justify-content:center;
-		align-items:flex-end;
-		img {
-			margin-top:-60px;
-			max-width:420px;
-		}
-		
-		
-	}
-}
-
-
-
 .footer {
 	background-color: black;
 	color: white;
 	text-align: center;
-	padding: 15px;
+	padding: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -293,13 +194,28 @@ h1 {
 		margin: 0px;
 	}
 }
+section {
+	max-width:1440px;
+	margin:auto;
+	gap:30px;
+	margin-top:100px;
+	margin-bottom:100px;
+	
+	@media (max-width:1440px){
+		padding-left:30px;
+		padding-right:30px;
+	}
+	@media (max-width:764){
+		margin-top:0;
+	}
+}
 h2 {
-	font-size:64px;
-	line-height:1;
-	margin-bottom:10px;
+	font-size:54px;
+	
+	padding-bottom: 25px;
 	text-align:center;
 	color:white;
-	padding:30px;
+
 	small {
 		display:block;
 		font-weight:100;
@@ -309,104 +225,13 @@ h2 {
 	@media (max-width:1024px){
 		font-size:48px;
 	}
-}
-
-
-.logos {
-    display:flex;
-	@media (max-width:1024px){
-		flex-direction:column;
-	}
-    max-width: 1440px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.card {
-    flex: 1;
-    background-color: transparent;
-    border: none;
-    color: #000000;
-    padding: 10px;
-    border-radius: 30px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
 	
-    align-items: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-}
-
-.card h3 {
-    margin-top: 0; /* Remove top margin */
-     /* Optional: Add slight padding if needed */
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .card {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .card {
-        width: 100%;
-        padding: 8px;
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        width: 100%;
-        padding: 5pxx;
-        border-radius: 20px;
-    }
-}
-
-.badge-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.project-stack {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 7px; /* Adjust spacing between badges */
-    padding: 10px;
-}
-
-.badge2 {
-    padding: 8px 15px;
-    background-color: #f7e89f; /* Adjust as needed */
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
-	
-   
-}
-
-.badge {
-	background-color: #6aa9f2;
-    color: black;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    display: inline-block;
-    line-height: 1.6;
 }
 
 /* Responsive Skills Section */
 .skills {
+	margin-top: 5px;
+	margin-bottom: -85px;
 	h2{
 		margin-bottom: -5px;
 	}
@@ -418,7 +243,7 @@ h2 {
         display: flex;
         flex-wrap: wrap; /* Allows wrapping for responsiveness */
         gap: 20px;
-        
+
         @media (max-width: 1024px) {
             flex-direction: column;
             padding: 25px;
@@ -426,7 +251,10 @@ h2 {
 
         @media (max-width: 768px) {
             padding: 20px;
+			
         }
+
+		
 
         .left-column {
             flex: 1;
@@ -464,6 +292,98 @@ h2 {
 
 
 
+/* Making h3 (Programming Languages & Frameworks) Inline and Responsive */
+.skills .holder-blue h3 {
+    display: inline-block;
+    font-size: 38px;
+    margin: 0 10px 15px 0; /* Added margin-bottom for spacing */
+    font-weight: bold;
+	color: white;
+}
+
+/* Adjustments for tablets */
+@media (max-width: 768px) {
+    .skills .holder-blue h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+}
+
+/* Adjustments for mobile */
+@media (max-width: 480px) {
+    .skills .holder-blue h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.badge {
+	background-color: #6aa9f2;
+    color: black;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    line-height: 1.6;
+}
+
+
+.card {
+	 /* Prevents excessive shrinking */
+    margin: auto;
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    padding: 10px;
+    border-radius: 30px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+	
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    margin-top: 0; /* Remove top margin */
+     /* Optional: Add slight padding if needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        padding: 5px;
+        border-radius: 20px;
+    }
+}
+
+.badge-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
 
 
 
@@ -471,4 +391,31 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+
+@media (max-width: 768px) {
+    .holder-blue {
+        width: 100%; /* Ensures both sections take full width */
+       /* Keeps them consistent */
+        margin: 0 auto; /* Centers them */
+        padding: 10px; /* Adds uniform padding */
+        box-sizing: border-box; /* Ensures padding doesn’t affect width */
+    }
+
+    .card {
+        width: 100%; /* Makes sure the card inside takes full width */
+        text-align: center;
+    }
+
+    .badge-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    img {
+        max-width: 100%; /* Ensures images don’t overflow */
+        height: auto;
+    }
 }
