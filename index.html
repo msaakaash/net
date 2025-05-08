@@ -221,6 +221,117 @@
             flex: 1;
         }
 
+        /* Experience Section - LinkedIn Style */
+        .experience-timeline {
+            margin-top: 1.5rem;
+            border-left: 2px solid var(--accent);
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .experience-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
+        }
+        
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            left: -29px;
+            top: 0;
+        }
+        
+        .experience-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            object-fit: cover;
+            position: absolute;
+            left: -60px;
+            top: 25px;
+            border: 1px solid var(--border);
+            background-color: var(--bg-secondary);
+            padding: 5px;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            margin-bottom: 0.2rem;
+        }
+        
+        .experience-company {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.2rem;
+        }
+        
+        .experience-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .experience-location {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .experience-location i {
+            margin-right: 5px;
+            font-size: 0.8rem;
+        }
+        
+        .experience-description {
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+        
+        .experience-description ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .experience-description li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .skills-used {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .skill-pill {
+            background-color: var(--bg-primary);
+            color: var(--text-secondary);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+        }
+
         /* Skills Section */
         .skills-list {
             display: flex;
@@ -468,27 +579,19 @@
     .achievement-content {
         max-width: 100%;
     }
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .achievement-item {
+    
+    .experience-logo {
+        left: -45px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .experience-timeline {
+        padding-left: 15px;
+    }
+    
+    .experience-header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .achievement-photo {
-        width: 100%;  /* Make the photo take the full width */
-        height: auto;
-    }
-
-    .achievement-title {
-        font-size: 1em;  /* Adjust title font size for smaller screens */
-    }
-
-    .achievement-content {
-        max-width: 100%;
     }
 }
 
@@ -567,6 +670,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#achievements">Certifications</a></li>
@@ -584,7 +688,7 @@
             <img src="./rules/images/msprofie.png" alt="Profile Picture" class="profile-pic">
             <div class="hero-content">
                 <h1>Aakaash M S</h1>
-                <p class="subtitle">Data Science • Machine Learning • Cloud Computing • Networks Engineering • Tennis</p>
+                <p class="subtitle">Data Science • Machine Learning • Cloud Computing • Network Engineering • Tennis</p>
                 <p>Student at Amrita Vishwa Vidyapeetham with a passion for data-driven innovation. Skilled in analyzing complex datasets, developing scalable ML/DL models, and deploying cloud-native solutions on AWS and GCP.</p>
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/msaakaash/" class="social-icon" target="_blank">
@@ -608,7 +712,7 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I’m Aakaash M S, a 20-year-old undergraduate pursuing my B.Tech in Computer Science and Engineering at Amrita Vishwa Vidyapeetham, Coimbatore. Born and raised in Salem, Tamil Nadu, I completed my schooling at Notre Dame of Holy Cross.</p>
+                    <p>I'm Aakaash M S, a 20-year-old undergraduate pursuing my B.Tech in Computer Science and Engineering at Amrita Vishwa Vidyapeetham, Coimbatore. Born and raised in Salem, Tamil Nadu, I completed my schooling at Notre Dame of Holy Cross.</p>
                 
                     <p>As a data-driven professional, I specialize in analyzing complex datasets and building scalable machine learning and deep learning models to extract meaningful insights. With a strong foundation in statistical analysis, data visualization, and trend identification, I strive to deliver actionable business solutions that support strategic decision-making.</p>
                 
@@ -617,9 +721,49 @@
                     <p>I also have practical experience in networking, including network protocol design, secure multi-user communication, load balancing, and serverless architecture—enabling efficient and secure data transmission across distributed systems.</p>
                 
                     <p>I'm also an avid tennis player, balancing my love for sports with my enthusiasm for data-driven innovation.</p>
-
                 </div>
-                
+            </div>
+        </section>
+        
+        <!-- Experience Section (New) -->
+        <section id="experience">
+            <h2>Experience</h2>
+            <p>My professional journey and real-world experience:</p>
+            
+            <div class="experience-timeline">
+                <!-- Experience Item 1 -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Software Developer Intern</h3>
+                            <div class="experience-company">Nutmeg Software Solutions</div>
+                            <div class="experience-date">Jan 2025 - April 2025</div>
+                            <div class="experience-location"><i class="fas fa-map-marker-alt"></i> Hosur, Tamil Nadu</div>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-description">
+                        <ul>
+                            <li>Successfully deployed and optimized cloud-based applications using AWS services, including Amazon EC2 and Amazon S3,
+                                achieving a 20% improvement in performance and reducing operational costs by 15%.</li>
+                            <li>Led a team of 4 developers in developing a full-stack web application for a client, leveraging React, Node.js, Express.js, and
+                                PostgreSQL, resulting in a 30% increase in user engagement.</li>
+                            <li>Effectively managed cross-functional teamwork using JIRA, streamlined meeting documentation by taking precise minutes,
+                                enhancing operational efficiency in a fast-paced startup environment.</li>
+
+                        </ul>
+                        <div class="skills-used">
+                            <span class="skill-pill">Full Stack</span>
+                            <span class="skill-pill">Team Collaboration</span>
+                            <span class="skill-pill">Code Integration</span>
+                            <span class="skill-pill">Prototype Design</span>
+                            <span class="skill-pill">JIRA</span>
+                            <span class="skill-pill">Cloud Computing</span>
+                        </div>
+                        <a href="./picture/Internship Certificate_Aakaash.pdf" target="_blank" sytle="" rel="noopener noreferrer">View Certificate</a>
+                     
+                    </div>
+                </div>
                 
             </div>
         </section>
@@ -669,12 +813,26 @@
                 </div>
             
                 <div class="skill-category">
+                    <strong>Cloud Technologies:</strong>
+                    <span class="skill-item">Amazon Web Services (AWS)</span>
+                    <span class="skill-item">Google Cloud Console</span>
+                </div>
+            
+                <div class="skill-category">
+                    <strong>Data Visualization & BI Tools:</strong>
+                    <span class="skill-item">Excel</span>
+                    <span class="skill-item">Power BI</span>
+                </div>
+            
+                <div class="skill-category">
                     <strong>Other Skills:</strong>
-                    <span class="skill-item">RESTful APIs</span>
-                    <span class="skill-item">Responsive Design</span>
-                    <span class="skill-item">UI/UX Design</span>
+                    <span class="skill-item">Team Collaboration</span>
+                    <span class="skill-item">Agile</span>
+                    <span class="skill-item">Documentation </span>
+                    <span class="skill-item">Public Speaking</span>
                 </div>
             </div>
+            
             
         </section>
 
